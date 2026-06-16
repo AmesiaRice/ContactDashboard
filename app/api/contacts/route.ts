@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Contact, SheetResponse } from "@/lib/types";
 
 export async function GET() {
-  const scriptUrl = process.env.NEXT_PUBLIC_APPS_SCRIPT_URL;
+  const scriptUrl = "https://script.google.com/macros/s/AKfycbwzqY4l5ykxtIbZUJChDJbxw0gubaH0VeiQj72xw2MIpYVjyauniCQPDX38tnUixn5A/exec";
 
   if (!scriptUrl) {
     return NextResponse.json(

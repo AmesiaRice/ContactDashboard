@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 const FORM_URL =
-  process.env.NEXT_PUBLIC_GOOGLE_FORM_URL ?? "#";
+  "https://docs.google.com/forms/d/e/1FAIpQLScQzDVW4G6wIOm8b5o4Nnq3IouNTBYCK6cHCw5gAkncBxHG5Q/viewform";  
 
 export default function Dashboard() {
   const [contacts, setContacts] = useState<Contact[]>([]);

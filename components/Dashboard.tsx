@@ -59,9 +59,8 @@ export default function Dashboard() {
   const uniqueCompanies = new Set(
     contacts.map((c) => c.company).filter(Boolean)
   ).size;
-  const contactTypes = [
-    ...new Set(contacts.map((c) => c.contactType).filter(Boolean)),
-  ];
+  const contactTypes = Array.from(new Set(contacts.map((c) => c.contactType).filter(Boolean)));
+    
 
   return (
     <div className="min-h-screen bg-slate-50">

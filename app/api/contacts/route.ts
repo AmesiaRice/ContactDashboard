@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Contact, SheetResponse } from "@/lib/types";
 
 export async function GET() {
-  const scriptUrl = "https://script.google.com/macros/s/AKfycbwzqY4l5ykxtIbZUJChDJbxw0gubaH0VeiQj72xw2MIpYVjyauniCQPDX38tnUixn5A/exec";
+  const scriptUrl = "https://script.google.com/macros/s/AKfycbywUx6CzelAnSTYO_t3vx8o-vgaYBtX1a5kQgAd2Uxg5G3yE-mMUp7bOY9Nyz-MGehxFA/exec";
 
   if (!scriptUrl) {
     return NextResponse.json(

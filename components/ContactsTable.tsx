@@ -39,6 +39,30 @@ export default function ContactsTable({
     );
   }
 
+  const handleTodayEntry = async (contact: Contact) => {
+  try {
+    const response = await fetch("/api/contacts/today-entry", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(contact),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert("✅ Data submitted successfully");
+      console.log("Success:", data);
+    } else {
+      alert(`❌ ${data.message}`);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("❌ Something went wrong");
+  }
+};
+
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-sm">
@@ -54,6 +78,7 @@ export default function ContactsTable({
               "Type",
               "Remarks",
               "Date",
+              "Today Entry",
             ].map((h) => (
               <th
                 key={h}
@@ -137,6 +162,9 @@ export default function ContactsTable({
                       year: "numeric",
                     })
                   : "—"}
+              </td>
+              <td className="px-4 py-3.5 text-slate-400 text-xs whitespace-nowrap">
+               <button  className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={()=>handleTodayEntry(c)}>Visit</button>
               </td>
             </tr>
           ))}

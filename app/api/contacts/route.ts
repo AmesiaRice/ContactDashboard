@@ -37,7 +37,7 @@ export async function GET() {
       phone: row["Phone No"] ?? row["phone"] ?? "",
       company: row["Company Name"] ?? row["company"] ?? "",
       address: row["Address"] ?? row["address"] ?? "",
-      email: row["Email"] ?? row["email"] ?? "",
+      vehicle: row["Vehicle no"] ?? row["vehicle"] ?? "",
       city: row["City"] ?? row["city"] ?? "",
       pincode: row["Pincode"] ?? row["pincode"] ?? "",
       contactType: row["Contact Type"] ?? row["contactType"] ?? "",

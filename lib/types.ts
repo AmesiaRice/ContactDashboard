@@ -4,7 +4,7 @@ export interface Contact {
   phone: string;
   company: string;
   address: string;
-  email: string;
+  vehicle: string;
   city: string;
   pincode: string;
   contactType: string;

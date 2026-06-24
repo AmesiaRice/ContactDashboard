@@ -22,7 +22,7 @@ export default function ContactsTable({
       c.name.toLowerCase().includes(q) ||
       c.company.toLowerCase().includes(q) ||
       c.city.toLowerCase().includes(q) ||
-      c.email.toLowerCase().includes(q) ||
+      c.vehicle.toLowerCase().includes(q) ||
       c.phone.includes(q);
     const matchesType =
       !filterType ||
@@ -74,7 +74,7 @@ export default function ContactsTable({
               "Phone",
               "Company",
               "City",
-              "Email",
+              "Vehicle",
               "Type",
               "Remarks",
               "Date",
@@ -136,13 +136,13 @@ export default function ContactsTable({
                 </span>
               </td>
               <td className="px-4 py-3.5">
-                {c.email ? (
+                {c.vehicle ? (
                   <a
-                    href={`mailto:${c.email}`}
+                    href={`mailto:${c.vehicle}`}
                     className="flex items-center gap-1 text-slate-600 hover:text-indigo-600 transition-colors"
                   >
-                    <Mail size={12} />
-                    <span className="truncate max-w-[180px]">{c.email}</span>
+                    {/* <Mail size={12} /> */}
+                    <span className="truncate max-w-[180px]">{c.vehicle}</span>
                   </a>
                 ) : (
                   "—"
